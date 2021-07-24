@@ -1,0 +1,37 @@
+:root {
+    --primary-color: #242582;
+    --secondary-color: #383838;
+    --tertiary-color: #f64c72;
+}
+
+body {
+    background-image: url(/assets/css/images/controllers.jpg);
+    background-color: var(--primary-color);
+    background-blend-mode: darken;
+    min-height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+    color: white;
+}
+
+header {
+    padding: 20px 35px;
+    height: 400px;
+}
+
+.title {
+    color: var(--tertiary-color);
+}
+
+.container {
+    padding: 20px 35px;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
