@@ -4,34 +4,57 @@
     --tertiary-color: #f64c72;
 }
 
-body {
+.bg-img{
     background-image: url(/assets/css/images/controllers.jpg);
     background-color: var(--primary-color);
     background-blend-mode: darken;
-    min-height: 100%;
-    overflow: hidden;
+    height: 100%;
     background-size: cover;
-    background-position: center center;
     background-repeat: no-repeat;
-    position: relative;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
+}
+
+.content {
     color: white;
+    text-align: center;
 }
 
 header {
-    padding: 20px 35px;
     height: 400px;
+    text-align: right;
 }
 
-.title {
+header .title {
     color: var(--tertiary-color);
+    max-width: 100%;
+    padding-top: 75px;
 }
 
-.container {
-    padding: 20px 35px;
+.start h1 {
+    color: white;
+}
+
+.start {
     text-align: center;
+    height: 700px;
 }
 
 .hide {
     display: none;
+}
+
+footer {
+    color: white;
+}
+
+.question-title {
+    text-align: center;
+}
+
+.button {
+    margin: 15px;
+}
+
+.choices, .results {
+    height: 700px;
 }
