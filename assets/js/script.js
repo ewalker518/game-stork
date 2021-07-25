@@ -62,7 +62,7 @@ function getQuestion() {
 
   var titleEl = document.getElementById("question-title");
   titleEl.textContent = currentQuestion.question;
-  titleEl.setAttribute("class", "content");
+  titleEl.setAttribute("class", "content questions");
   titleEl.setAttribute("class", "question-title has-text-white");
 
   questionChoices.innerHTML = ""; //delete old choices
@@ -98,7 +98,8 @@ function onButtonClick() {
 function endQuiz() {  
 
   var finalResults = document.getElementById("final-results");
-  finalResults.removeAttribute("class"); // this will display the final results
+  finalResults.removeAttribute("class", "hide"); // this will display the final results
+  finalResults.setAttribute("class", "results");
   
   questionsEl.setAttribute("class", "hide");   //hide questions
   

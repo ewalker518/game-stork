@@ -4,11 +4,6 @@
     --tertiary-color: #f64c72;
 }
 
-.container {
-    align-items: center;
-    color: white;
-}
-
 .bg-img{
     background-image: url(/assets/css/images/controllers.jpg);
     background-color: var(--primary-color);
@@ -21,6 +16,7 @@
 
 .content {
     color: white;
+    text-align: center;
 }
 
 header {
@@ -59,7 +55,6 @@ footer {
     margin: 15px;
 }
 
-.content {
-    text-align: center;
+.choices, .results {
     height: 700px;
 }
