@@ -42,7 +42,11 @@ var questions = [
         choices: ["Younger than 15", "15-20", "20-25", "25-30", "30+"],
     },
     {
+<<<<<<< HEAD
         question: "What level of difficulty are you looking for?",
+=======
+        title: "What level of difficulty are you looking for?",
+>>>>>>> feature/client-side-storage
         choices: ["Easy", "Moderate", "Hard"],
     }
 ];
