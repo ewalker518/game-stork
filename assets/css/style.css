@@ -4,6 +4,11 @@
     --tertiary-color: #f64c72;
 }
 
+.container {
+    align-items: center;
+    color: white;
+}
+
 .bg-img{
     background-image: url(/assets/css/images/controllers.jpg);
     background-color: var(--primary-color);
@@ -11,8 +16,11 @@
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
     /* background-attachment: fixed; */
+}
+
+.content {
+    color: white;
 }
 
 header {
@@ -32,7 +40,6 @@ header .title {
 
 .start {
     text-align: center;
-    color: white;
     height: 700px;
 }
 
@@ -42,4 +49,17 @@ header .title {
 
 footer {
     color: white;
+}
+
+.question-title {
+    text-align: center;
+}
+
+.button {
+    margin: 15px;
+}
+
+.content {
+    text-align: center;
+    height: 700px;
 }
