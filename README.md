@@ -23,3 +23,5 @@ Try now down below!<h4>
 
 <h2>Preview<h2>
   <img src="https://user-images.githubusercontent.com/84366215/126916602-a7f102b3-0e85-4dbb-94b5-b139fb3ffacb.png" alt="bulma" width="892" height="409"/> </a> 
+
+  <h4 align="center">Made With ❤️ by Dylan, Eric, Jessie, Trent, Noah
