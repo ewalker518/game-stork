@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Game Stork</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body class="bg-img">
@@ -14,34 +14,33 @@
         <header>
             <h1 class="title is-1">GameGo (not GameStop)</h1>
         </header>
-        <div id="start-screen" class="block start">
-            <h1 class="title is-3">Welcome to Game Go!</h1>
-            <p class="content is-medium">
-                Have you finished playing all of the video games you own?
-                Are you bored of replaying them all…again? Are you wondering what you should play next?
-                This website will solve that problem! Simply take the quiz and tell us what types of things you
-                enjoy in a game, and we’ll not only give you ideas based on your input, but we’ll show you where
-                those games are available for purchase!
-            </p>
-            <button id="start-btn" class="button is-danger is-medium">Start Quiz</button>
-        </div>
+        <div class="content">
+            <div id="start-screen" class="block start">
+                <h1 class="title is-3">Welcome to Game Go!</h1>
+                <p class="content is-medium">
+                    Have you finished playing all of the video games you own?
+                    Are you bored of replaying them all…again? Are you wondering what you should play next?
+                    This website will solve that problem! Simply take the quiz and tell us what types of things you
+                    enjoy in a game, and we’ll not only give you ideas based on your input, but we’ll show you where
+                    those games are available for purchase!
+                </p>
+                <button id="start-btn" class="button is-danger is-medium">Start Quiz</button>
+            </div>
 
-        <div id="questions" class="block hide">
-            <h1 id="question-title"></h1>
-            <div id="choices" class="block choices"></div>
-        </div>
+            <div id="questions" class="questions hide">
+                <h1 id="question-title"></h1>
+                <div id="choices" class="choices"></div>
+            </div>
 
-        <div id="finalresults" class="block hide">
-            <h1>All Done!</h1>
-            <p>Your recommended Video Game Title is <span id="score"></span>.</p>
-        </div>
+            <div id="final-results" class="final-results block hide">
+                <h1 class="title is-3 has-text-white">All Done!</h1>
+                <p>Your recommended Video Game Title is <span id="score"></span>.</p>
+            </div>
 
-        <div id="results" class="hideresults"></div>
-        <footer>
-            <p class="content is-medium">Made by a bunch of nerds who also like video games</p>
-        </footer>
+            <div id="results" class="hideresults"></div>
+        </div>
     </div>
-<script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
