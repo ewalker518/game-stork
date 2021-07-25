@@ -43,7 +43,7 @@ var questions = [
     },
     {
         title: "What level of difficulty are you looking for?",
-        choices: ["easy", "hard"],
+        choices: ["Easy", "Moderate", "Hard"],
     }
 ];
 
@@ -53,6 +53,7 @@ function startQuiz() { //what happens when you press the start quiz button
   var startScreenEl = document.getElementById("start-screen"); //select the first page html
   startScreenEl.setAttribute("class", "hide"); // references the css stylesheet, display: none .....so this hides the initial page
   questionsEl.removeAttribute("class", "hide"); // this will display the questions
+  questionsEl.setAttribute("class", "questions");
   
   getQuestion();  //transitional function to next function
 }
