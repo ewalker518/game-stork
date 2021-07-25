@@ -101,6 +101,7 @@ function endQuiz() {
 
   var finalResults = document.getElementById("final-results");
   finalResults.removeAttribute("class"); // this will display the final results
+  finalResults.setAttribute("class", "results");
   
   questionsEl.setAttribute("class", "hide");   //hide questions
   
