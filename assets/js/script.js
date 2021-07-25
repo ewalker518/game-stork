@@ -43,7 +43,7 @@ var questions = [
     },
     {
         question: "What level of difficulty are you looking for?",
-        choices: ["", ""],
+        choices: ["Easy", "Moderate", "Hard"],
     }
 ];
 
