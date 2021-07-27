@@ -169,3 +169,18 @@ function initMap() {
 }
 
 
+function createMarker(place) {
+  if (!place.geometry || !place.geometry.location) return;
+  const marker = new google.maps.Marker({
+    map,
+    position: place.geometry.location,
+    Animation: google.maps.Animation.BOUNCE,
+   
+  });
+  google.maps.event.addListener(marker, "click", () => {
+    infowindow.setContent(place.name || "");
+    infowindow.open(map, marker,);
+  });
+}
+
+
