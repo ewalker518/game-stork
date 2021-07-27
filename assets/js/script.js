@@ -139,6 +139,7 @@ function endQuiz() {
 startButtonEl.onclick = startQuiz; //this starts the quiz
 
 
+<<<<<<< HEAD
 // AIzaSyA9cAc8pUNYE96OzI0MJ_2jARcnYFGV7Gw       GOOGLE API KEY
 
 let map;
@@ -181,3 +182,7 @@ function createMarker(place) {
     infowindow.open(map, marker,);
   });
 }
+=======
+
+//localStore api response 
+>>>>>>> 2dd040520dfe7ccf5a0fc6ee3f229f86719baf09
