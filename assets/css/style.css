@@ -14,15 +14,6 @@
     /* background-attachment: fixed; */
 }
 
-.header-title {
-    display: flex;
-    height: 140px;
-    width: 50%;
-    border-bottom: 3px solid;
-    margin-bottom: 50px;
-    border-color: var(--tertiary-color);
-}
-
 .content {
     color: white;
     text-align: center;
@@ -33,10 +24,21 @@ header {
     text-align: right;
 }
 
+.header-title {
+    display: flex;
+    height: 140px;
+    width: 50%;
+    border-bottom: 3px solid;
+    margin-bottom: 5px;
+    border-color: var(--tertiary-color);
+}
+
 header .title {
     color: var(--tertiary-color);
     max-width: 100%;
-    padding-top: 75px;
+    padding: 30px 30px 30px 30px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 6rem;
 }
 
 .start h1 {
