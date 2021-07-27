@@ -140,7 +140,7 @@ startButtonEl.onclick = startQuiz; //this starts the quiz
 
 
 // AIzaSyA9cAc8pUNYE96OzI0MJ_2jARcnYFGV7Gw       GOOGLE MAP API KEY
-
+// map with store location
 let map;
 let service;
 let infowindow;
