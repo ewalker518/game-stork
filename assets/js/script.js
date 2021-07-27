@@ -47,6 +47,8 @@ var questions = [
     }
 ];
 
+
+
 //var submitButton = document.getElementById("submit"); //XXXXXXXXXX JESSIE AND TRENT XXXXXXXXXXX IF YOU WANT TO LINK TO ANOTHER HTML PAGE
 
 function startQuiz() { //what happens when you press the start quiz button
@@ -104,13 +106,18 @@ function endQuiz() {
   finalResults.setAttribute("class", "results");
   
   questionsEl.setAttribute("class", "hide");   //hide questions
-  
+
+ 
 
   //XXXXXXXXXX PLACE HOLDER FOR JESSIE AND TRENT XXXXXXXXXXX 
   //var scoreEl = document.getElementById("score");   //display final score
   //scoreEl.textContent = time;
 
+  
+
 }
+
+
 
 //XXXXXXXXXX JESSIE AND TRENT XXXXXXXXXXX IF YOU WOULD LIKE TO LINK TO ANOTHER HTML FILE FOR THE GOOGLE MAPS 
 //function showHighScores() {
@@ -130,3 +137,47 @@ function endQuiz() {
 //submitButton.onclick = showHighScores;
 
 startButtonEl.onclick = startQuiz; //this starts the quiz
+
+
+// AIzaSyA9cAc8pUNYE96OzI0MJ_2jARcnYFGV7Gw       GOOGLE API KEY
+
+let map;
+let service;
+let infowindow;
+
+function initMap() {
+  const saltLake = new google.maps.LatLng(40.7608, 111.8910);
+  infowindow = new google.maps.InfoWindow();
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: saltLake,
+    zoom: 12,
+  });
+  const request = {
+    query: "game stop", 
+    fields: ["name", "geometry"],
+  };
+  service = new google.maps.places.PlacesService(map);
+  service.findPlaceFromQuery(request, (results, status) => {
+    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+      for (let i = 0; i < results.length; i++) {
+        createMarker(results[i]);
+      }
+      map.setCenter(results[0].geometry.location);
+    }
+  });
+  
+}
+
+function createMarker(place) {
+  if (!place.geometry || !place.geometry.location) return;
+  const marker = new google.maps.Marker({
+    map,
+    position: place.geometry.location,
+    Animation: google.maps.Animation.BOUNCE,
+   
+  });
+  google.maps.event.addListener(marker, "click", () => {
+    infowindow.setContent(place.name || "");
+    infowindow.open(map, marker,);
+  });
+}

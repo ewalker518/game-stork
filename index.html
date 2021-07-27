@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Game Stork</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -28,7 +29,7 @@
                 </p>
                 <button id="start-btn" class="button is-danger is-medium">Start Quiz</button>
             </div>
-
+           
             <div id="questions" class="questions hide">
                 <h1 id="question-title"></h1>
                 <div id="choices" class="choices"></div>
@@ -37,11 +38,23 @@
             <div id="final-results" class="final-results block hide">
                 <h1 class="title is-3 has-text-white">All Done!</h1>
                 <p>Your recommended Video Game Title is <span id="score"></span>.</p>
+                
             </div>
-
+            
         </div>
+        
+       
     </div>
+    <div id="map"></div>
+    
+  
+    
+    
     <script src="./assets/js/script.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9cAc8pUNYE96OzI0MJ_2jARcnYFGV7Gw&callback=initMap&libraries=places"
+      async
+    ></script>
 </body>
 
 </html>
