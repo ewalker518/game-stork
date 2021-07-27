@@ -130,3 +130,7 @@ function endQuiz() {
 //submitButton.onclick = showHighScores;
 
 startButtonEl.onclick = startQuiz; //this starts the quiz
+
+
+
+//localStore api response 
