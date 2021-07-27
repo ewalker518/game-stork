@@ -47,6 +47,8 @@ var questions = [
     }
 ];
 
+
+
 //var submitButton = document.getElementById("submit"); //XXXXXXXXXX JESSIE AND TRENT XXXXXXXXXXX IF YOU WANT TO LINK TO ANOTHER HTML PAGE
 
 function startQuiz() { //what happens when you press the start quiz button
@@ -104,13 +106,18 @@ function endQuiz() {
   finalResults.setAttribute("class", "results");
   
   questionsEl.setAttribute("class", "hide");   //hide questions
-  
+
+ 
 
   //XXXXXXXXXX PLACE HOLDER FOR JESSIE AND TRENT XXXXXXXXXXX 
   //var scoreEl = document.getElementById("score");   //display final score
   //scoreEl.textContent = time;
 
+  
+
 }
+
+
 
 //XXXXXXXXXX JESSIE AND TRENT XXXXXXXXXXX IF YOU WOULD LIKE TO LINK TO ANOTHER HTML FILE FOR THE GOOGLE MAPS 
 //function showHighScores() {
