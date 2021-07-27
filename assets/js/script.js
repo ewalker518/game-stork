@@ -6,43 +6,43 @@ var questionsIndex = 0;
 
 var questions = [
     {
-        question: "Do you prefer a console or a PC?",
+        title: "Do you prefer a console or a PC?",
         choices: ["Console", "PC"],
     },
     {
-        question: "How much time do you spend per week gaming?",
+        title: "How much time do you spend per week gaming?",
         choices: ["Less than 2 hours", "2-4 hours", "4-6 hours", "6+ hours"],
     },
     {
-        question: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Adventure",
-        choices: ["1", "2", "3", "4", "5"],
+        title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Adventure",
+        choices: ["example1", "example2", "example3", "example4", "example5"],
     },
     {
-        question: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: RPG",
-        choices: ["1", "2", "3", "4", "5"],
+        title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: RPG",
+        choices: ["example1", "example2", "example3", "example4", "example5"],
     },
     {
-        question: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: First-Person Shooter",
-        choices: ["1", "2", "3", "4", "5"],
+        title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: First-Person Shooter",
+        choices: ["example1", "example2", "example3", "example4", "v5"],
     },
     {
-        question: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Fantasy",
-        choices: ["1", "2", "3", "4", "5"],
+        title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Fantasy",
+        choices: ["example1", "example2", "example3", "example4", "v5"],
     },
     {
-        question: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Sports",
-        choices: ["1", "2", "3", "4", "5"],
+        title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Sports",
+        choices: ["example1", "example2", "example3", "example4", "v5"],
     },
     {
-        question: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Racing",
-        choices: ["1", "2", "3", "4", "5"],
+        title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Racing",
+        choices: ["example1", "example2", "example3", "example4", "v5"],
     },
     {
-        question: "What is your age?",
+        title: "What is your age?",
         choices: ["Younger than 15", "15-20", "20-25", "25-30", "30+"],
     },
     {
-        question: "What level of difficulty are you looking for?",
+        title: "What level of difficulty are you looking for?",
         choices: ["Easy", "Moderate", "Hard"],
     }
 ];
@@ -62,7 +62,7 @@ function getQuestion() {
   var currentQuestion = questions[questionsIndex]; //XXXXXXXXXX JESSIE AND TRENT XXXXXXXXXXX this is for the api's YOU CAN CHANGE THE QUESTION INDEX TO YOUR API
 
   var titleEl = document.getElementById("question-title");
-  titleEl.textContent = currentQuestion.question;
+  titleEl.textContent = currentQuestion.title;
   titleEl.setAttribute("class", "content questions");
   titleEl.setAttribute("class", "question-title has-text-white");
 
@@ -74,12 +74,13 @@ function getQuestion() {
     loopChoices.setAttribute("class", "choice button is-danger");
     loopChoices.setAttribute("value", choice);
 
-    loopChoices.textContent = choice;   //https://www.youtube.com/watch?v=49pYIMygIcU  its like 40 minutes long and they didn't section it out but its full of good information
-
+    loopChoices.textContent = i + 1 + ". " + choice;   //https://www.youtube.com/watch?v=49pYIMygIcU  its like 40 minutes long and they didn't section it out but its full of good information
+    
     
     loopChoices.onclick = onButtonClick; 
 
     questionChoices.appendChild(loopChoices); // puts the values on the page //XXXXXXXXXX JESSIE AND TRENT XXXXXXXXXXX PROBABLY GOING TO NEED TO CHANGE/DELETE THIS FOR API
+    
   });
 }
 
@@ -99,7 +100,7 @@ function onButtonClick() {
 function endQuiz() {  
 
   var finalResults = document.getElementById("final-results");
-  finalResults.removeAttribute("class", "hide"); // this will display the final results
+  finalResults.removeAttribute("class"); // this will display the final results
   finalResults.setAttribute("class", "results");
   
   questionsEl.setAttribute("class", "hide");   //hide questions
@@ -127,4 +128,9 @@ function endQuiz() {
     //window.location.href = "highscore.html";   //this will take us to the separate html page
 //}
 //submitButton.onclick = showHighScores;
+
 startButtonEl.onclick = startQuiz; //this starts the quiz
+
+
+
+//localStore api response 
