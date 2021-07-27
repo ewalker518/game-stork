@@ -5,7 +5,7 @@
 }
 
 .bg-img{
-    background-image: url(/assets/images/controllers.jpg);
+    background-image: url(./assets/images/controllers.jpg);
     background-color: var(--primary-color);
     background-blend-mode: darken;
     height: 1000px;
