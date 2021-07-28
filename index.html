@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Game Stork</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -13,12 +17,12 @@
     <div class="container">
         <header>
             <div class="header-title">
-            <h1 class="title is-1">Game Stork</h1>
+            <h1 class="title is-0">Game Stork</h1>
             </div>
         </header>
         <div class="content">
             <div id="start-screen" class="block start border-wrap">
-                <h1 class="title is-3">Welcome to Game Go!</h1>
+                <h1 class="title is-3">Welcome to Game Stork!</h1>
                 <p class="content is-medium">
                     Have you finished playing all of the video games you own?
                     Are you bored of replaying them all…again? Are you wondering what you should play next?
@@ -28,7 +32,7 @@
                 </p>
                 <button id="start-btn" class="button is-danger is-medium">Start Quiz</button>
             </div>
-
+           
             <div id="questions" class="questions hide">
                 <h1 id="question-title"></h1>
                 <div id="choices" class="choices"></div>
@@ -36,12 +40,23 @@
 
             <div id="final-results" class="final-results block hide">
                 <h1 class="title is-3 has-text-white">All Done!</h1>
-                <p>Your recommended Video Game Title is <span id="score"></span>.</p>
+                <p class="content is-medium">Your recommended Video Game Title is <span id="score"></span>.</p>
             </div>
-
+            
         </div>
+        
+       
     </div>
+    
+    <div id="map"></div>
+  
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9cAc8pUNYE96OzI0MJ_2jARcnYFGV7Gw&callback=initMap&libraries=places"
+      async
+    ></script>
     <script src="./assets/js/script.js"></script>
+    
 </body>
 
 </html>
