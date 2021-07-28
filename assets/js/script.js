@@ -5,14 +5,14 @@ var startButtonEl = document.getElementById("start-btn");
 var questionsIndex = 0;
 
 var questions = [
-  {
-    title: "Do you prefer a console or a PC?",
-    choices: ["Console", "PC"],
-  },
-  {
-    title: "How much time do you spend per week gaming?",
-    choices: ["Less than 2 hours", "2-4 hours", "4-6 hours", "6+ hours"],
-  },
+  // {
+  //   title: "Do you prefer a console or a PC?",
+  //   choices: ["Console", "PC"],
+  // },
+  // {
+  //   title: "How much time do you spend per week gaming?",
+  //   choices: ["Less than 2 hours", "2-4 hours", "4-6 hours", "6+ hours"],
+  // },
   {
     title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Adventure",
     choices: ["example1", "example2", "example3", "example4", "example5"],
@@ -37,14 +37,14 @@ var questions = [
     title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Racing",
     choices: ["example1", "example2", "example3", "example4", "v5"],
   },
-  {
-    title: "What is your age?",
-    choices: ["Younger than 15", "15-20", "20-25", "25-30", "30+"],
-  },
-  {
-    title: "What level of difficulty are you looking for?",
-    choices: ["Easy", "Moderate", "Hard"],
-  }
+  // {
+  //   title: "What is your age?",
+  //   choices: ["Younger than 15", "15-20", "20-25", "25-30", "30+"],
+  // },
+  // {
+  //   title: "What level of difficulty are you looking for?",
+  //   choices: ["Easy", "Moderate", "Hard"],
+  // }
 ];
 
 
@@ -111,27 +111,30 @@ function endQuiz() {
   //var scoreEl = document.getElementById("score");   //display final score
   //scoreEl.textContent = time;
 
+  //gets results for adventure genre onto page
+  genreAdventure();
+
 }
 
-// //key_63a5c26330c14fde8375dae993498847
-// //https://api.rawg.io/api/games/{game_pk}/development-team
-// https://api.rawg.io/api/genres=key_63a5c26330c14fde8375dae993498847
+function genreAdventure() {
 
-// function gameList() {
-//   var listApi = document.getElementById("score");
+  var genreApi = "https://api.rawg.io/api/genres?key=63a5c26330c14fde8375dae993498847"
 
-//   fetch(
-//     "https://api.rawg.io/api/genres=key_63a5c26330c14fde8375dae993498847"
-//   )
-//     .then(function(response) {
-//       return response.json();
-//     })
-//     .then(function(data) {
-//       console.log(data);
-//     });
+  fetch(genreApi)
+      .then(function (response) {
+          return response.json();
+      })
+      .then(function (data) {
+          var genreContainer = document.getElementById("game-container");
 
+          var gameName = document.createElement("span");
+          //results[2].games[0].name
+          gameName.textContent = data.results[2].games[2].name;
 
-// }
+          genreContainer.appendChild(gameName);
+      });
+}
+
 
 
 //XXXXXXXXXX JESSIE AND TRENT XXXXXXXXXXX IF YOU WOULD LIKE TO LINK TO ANOTHER HTML FILE FOR THE GOOGLE MAPS 
@@ -156,4 +159,5 @@ startButtonEl.onclick = startQuiz; //this starts the quiz
 
 
 //localStore api response 
+
 
