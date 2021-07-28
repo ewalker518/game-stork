@@ -60,12 +60,6 @@ header .title {
     display: none;
 }
 
-footer {
-    color: white;
-    margin-top: 200px;
-    position: absolute;
-}
-
 .question-title {
     text-align: center;
 }
@@ -80,5 +74,5 @@ footer {
   }
 
 .choices, .results {
-    height: 700px;
+    height: 100%;
 }
