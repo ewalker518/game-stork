@@ -27,7 +27,7 @@ header {
 .header-title {
     display: flex;
     height: 140px;
-    width: 50%;
+    width: 70%;
     border-bottom: 6px solid;
     margin-bottom: 5px;
     border-color: var(--tertiary-color);
