@@ -15,27 +15,27 @@ var questions = [
   // },
   {
     title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Adventure",
-    choices: ["example1", "example2", "example3", "example4", "example5"],
+    choices: ["", "", "", "", ""],
   },
   {
     title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: RPG",
-    choices: ["example1", "example2", "example3", "example4", "example5"],
+    choices: ["", "", "", "", ""],
   },
   {
     title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: First-Person Shooter",
-    choices: ["example1", "example2", "example3", "example4", "v5"],
+    choices: ["", "", "", "", ""],
   },
   {
     title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Simulation",
-    choices: ["example1", "example2", "example3", "example4", "v5"],
+    choices: ["", "", "", "", ""],
   },
   {
     title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Sports",
-    choices: ["example1", "example2", "example3", "example4", "v5"],
+    choices: ["", "", "", "", ""],
   },
   {
     title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Racing",
-    choices: ["example1", "example2", "example3", "example4", "v5"],
+    choices: ["", "", "", "", ""],
   },
   // {
   //   title: "What is your age?",
@@ -75,7 +75,7 @@ function getQuestion() {
     loopChoices.setAttribute("class", "choice button is-danger");
     loopChoices.setAttribute("value", choice);
 
-    loopChoices.textContent = i + 1 + ". " + choice;   //https://www.youtube.com/watch?v=49pYIMygIcU  its like 40 minutes long and they didn't section it out but its full of good information
+    loopChoices.textContent = i + 1  + choice;   //https://www.youtube.com/watch?v=49pYIMygIcU  its like 40 minutes long and they didn't section it out but its full of good information
 
 
     loopChoices.onclick = onButtonClick;
@@ -84,6 +84,7 @@ function getQuestion() {
 
   });
 }
+
 
 function onButtonClick() {
 
