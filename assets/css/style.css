@@ -86,6 +86,11 @@ header .title {
     left: 25%;
 }
 
+.map-title {
+    padding-top: 80px;
+    text-align: center;
+}
+
 .choices, .results {
     height: 100%;
 }

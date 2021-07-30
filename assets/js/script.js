@@ -3,8 +3,14 @@ var questionChoices = document.getElementById("choices"); //references the diffe
 var titleEl = document.getElementById("question-title");
 var startButtonEl = document.getElementById("start-btn");
 var questionsIndex = 0;
+var genreContainer = document.getElementById("game-container");
 
-var questions = [ // questions that are commented out are to be used in future development
+
+var questions = [
+  {
+    title: "Which one do you prefer?",
+    choices: ["Adventure", "RPG", "Shooter", "Simulation", "Sports", "Racing"]
+  }
   // {
   //   title: "Do you prefer a console or a PC?",
   //   choices: ["Console", "PC"],
@@ -13,30 +19,31 @@ var questions = [ // questions that are commented out are to be used in future d
   //   title: "How much time do you spend per week gaming?",
   //   choices: ["Less than 2 hours", "2-4 hours", "4-6 hours", "6+ hours"],
   // },
-  {
-    title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Adventure",
-    choices: ["", "", "", "", ""],
-  },
-  {
-    title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: RPG",
-    choices: ["", "", "", "", ""],
-  },
-  {
-    title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: First-Person Shooter",
-    choices: ["", "", "", "", ""],
-  },
-  {
-    title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Simulation",
-    choices: ["", "", "", "", ""],
-  },
-  {
-    title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Sports",
-    choices: ["", "", "", "", ""],
-  },
-  {
-    title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Racing",
-    choices: ["", "", "", "", ""],
-  },
+  //  {
+  //   title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Adventure",
+  //   choices: ["1", "2", "3", "4", "5"],
+  //   answer: 5
+  // },
+  // {
+  //   title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: RPG",
+  //   choices: ["1", "2", "3", "4", "5"],
+  // },
+  // {
+  //   title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: First-Person Shooter",
+  //   choices: ["1", "2", "3", "4", "5"],
+  // },
+  // {
+  //   title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Simulation",
+  //   choices: ["1", "2", "3", "4", "5"],
+  // },
+  // {
+  //   title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Sports",
+  //   choices: ["1", "2", "3", "4", "5"],
+  // },
+  // {
+  //   title: "On a scale of 1-5 (1 = dislike, 5 = like) rate the following genre: Racing",
+  //   choices: ["1", "2", "3", "4", "5"],
+  // },
   // {
   //   title: "What is your age?",
   //   choices: ["Younger than 15", "15-20", "20-25", "25-30", "30+"],
@@ -67,18 +74,31 @@ function getQuestion() {
   titleEl.setAttribute("class", "content questions");
   titleEl.setAttribute("class", "question-title has-text-white");
 
-  questionChoices.innerHTML = ""; //delete old choices
+  //questionChoices.innerHTML = ""; //delete old choices
 
-  currentQuestion.choices.forEach(function (choice, i) {  // create a loop to actually add in the new choices https://stackoverflow.com/questions/56024232/use-the-foreach-function-to-add-option-elements-to-select-html-element    
+
+
+  currentQuestion.choices.forEach(function (choices, i) {  // create a loop to actually add in the new choices https://stackoverflow.com/questions/56024232/use-the-foreach-function-to-add-option-elements-to-select-html-element    
     //because the old choices are deleted this will add brand new choices into the mix, it doesnt replace the values, rather it hides the values and unhides new values which are in the array https://utah.bootcampcontent.com/utah-coding-bootcamp/uofu-virt-bo-fsf-pt-06-2021-u-b/-/tree/master/04-Web-APIs/02-Challenge
     var loopChoices = document.createElement("button");
     loopChoices.setAttribute("class", "choice button is-danger");
-    loopChoices.setAttribute("value", choice);
+    loopChoices.setAttribute("value", choices);
 
-    loopChoices.textContent = i + 1  + choice;   //https://www.youtube.com/watch?v=49pYIMygIcU  its like 40 minutes long and they didn't section it out but its full of good information
+    loopChoices.textContent = i + 1 + ". " + choices;   //https://www.youtube.com/watch?v=49pYIMygIcU  its like 40 minutes long and they didn't section it out but its full of good information
 
 
     loopChoices.onclick = onButtonClick;
+
+    console.log(questionChoices);
+
+    // let attribute = questionChoices.getAttribute(choices);
+    // console.log(attribute)
+    $("button").click(function () {
+      var fired_button = $(this).val();
+      console.log(fired_button)
+    });
+
+
 
     questionChoices.appendChild(loopChoices); // puts the values on the page //XXXXXXXXXX JESSIE AND TRENT XXXXXXXXXXX PROBABLY GOING TO NEED TO CHANGE/DELETE THIS FOR API
 
@@ -122,19 +142,41 @@ function genreAdventure() {
   var genreApi = "https://api.rawg.io/api/genres?key=63a5c26330c14fde8375dae993498847"
 
   fetch(genreApi)
-      .then(function (response) {
-          return response.json();
-      })
-      .then(function (data) {
-          var genreContainer = document.getElementById("game-container");
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      // var genreContainer = document.getElementById("game-container");
 
-          var gameName = document.createElement("span");
-          //results[2].games[0].name
-          gameName.textContent = data.results[2].games[2].name;
+      // var gameName = document.createElement("span");
+      // var rpgResult = data.results[3].name;
+      // //results[2].games[0].name
+      // //console.log(data.results[2].games[2].name);
+      // if (rpgResult === "RPG") {
+      //   gameName.textContent = data.results[3].games[1].name;
+      // } else {
+      //   console.log(data.results[3].name)
+      // };
+      // console.log(data.results[i].name)
+      for (var i = 0; i < data.results.length; i++) {
+        //format repo name
+        var gameName = data.results[i].name;
 
-          genreContainer.appendChild(gameName);
-      });
+        //create a span element to hold repository name 
+        var titleEL = document.createElement("span");
+        titleEL.textContent = gameName;
+
+        //append container to the dom 
+        genreContainer.appendChild(titleEL);
+        console.log(titleEL);
+
+      }
+
+    });
 }
+
+
+
 
 
 
