@@ -4,7 +4,7 @@ var titleEl = document.getElementById("question-title");
 var startButtonEl = document.getElementById("start-btn");
 var questionsIndex = 0;
 
-var questions = [
+var questions = [ // questions that are commented out are to be used in future development
   // {
   //   title: "Do you prefer a console or a PC?",
   //   choices: ["Console", "PC"],
