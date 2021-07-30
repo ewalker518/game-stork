@@ -4,6 +4,8 @@
     --tertiary-color: #f64c72;
 }
 
+/* background image */
+
 .bg-img{
     background-image: url(../images/controllers.jpg);
     background-color: var(--primary-color);
@@ -11,13 +13,16 @@
     height: 1000px;
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
 }
+
+/* color and alignment for all text */
 
 .content {
     color: white;
     text-align: center;
 }
+
+/* header styling */
 
 header {
     height: 400px;
@@ -40,6 +45,8 @@ header .title {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 6rem;
 }
+
+/* content styling */
 
 .start h1 {
     color: white;
