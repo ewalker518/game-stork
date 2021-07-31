@@ -56,6 +56,9 @@ var retrievedObject = localStorage.getItem('testObject');
 
 console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
+// console log shows local storage "retrieved objects" values needs to be changed
+
+
 
 
 
