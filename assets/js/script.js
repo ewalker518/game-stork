@@ -9,7 +9,7 @@ var genreContainer = document.getElementById("game-container");
 var questions = [
   {
     title: "Which one do you prefer?",
-    choices: ["Adventure", "RPG", "Shooter", "Simulation", "Sports", "Racing"]
+    choices: ["adventure", "casual", "shooter", "simulation", "indie", "racing"]
   }
   // {
   //   title: "Do you prefer a console or a PC?",
@@ -83,20 +83,15 @@ function getQuestion() {
     var loopChoices = document.createElement("button");
     loopChoices.setAttribute("class", "choice button is-danger");
     loopChoices.setAttribute("value", choices);
+    loopChoices.setAttribute("data-genres", choices)
 
     loopChoices.textContent = i + 1 + ". " + choices;   //https://www.youtube.com/watch?v=49pYIMygIcU  its like 40 minutes long and they didn't section it out but its full of good information
 
 
     loopChoices.onclick = onButtonClick;
 
-    console.log(questionChoices);
 
-    // let attribute = questionChoices.getAttribute(choices);
-    // console.log(attribute)
-    $("button").click(function () {
-      var fired_button = $(this).val();
-      console.log(fired_button)
-    });
+
 
 
 
@@ -133,46 +128,50 @@ function endQuiz() {
   //scoreEl.textContent = time;
 
   //gets results for adventure genre onto page
-  genreAdventure();
+  genreChoices();
 
 }
 
-function genreAdventure() {
+function displayGame() {
+  var genreContainer = document.getElementById("game-container");
+  var gameName = document.createElement("span");
 
-  var genreApi = "https://api.rawg.io/api/genres?key=63a5c26330c14fde8375dae993498847"
+  genreContainer.textContent = results[0].name
+}
 
-  fetch(genreApi)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      // var genreContainer = document.getElementById("game-container");
+function genreChoices(genres) {
+  // https://api.rawg.io/api/games?key=63a5c26330c14fde8375dae993498847&page_size=1&genres=shooter
 
-      // var gameName = document.createElement("span");
-      // var rpgResult = data.results[3].name;
-      // //results[2].games[0].name
-      // //console.log(data.results[2].games[2].name);
-      // if (rpgResult === "RPG") {
-      //   gameName.textContent = data.results[3].games[1].name;
-      // } else {
-      //   console.log(data.results[3].name)
-      // };
-      // console.log(data.results[i].name)
-      for (var i = 0; i < data.results.length; i++) {
-        //format repo name
-        var gameName = data.results[i].name;
+  var genreApi = "https://api.rawg.io/api/games?key=63a5c26330c14fde8375dae993498847&page_size=1&genres=" + genres
 
-        //create a span element to hold repository name 
-        var titleEL = document.createElement("span");
-        titleEL.textContent = gameName;
+  fetch(genreApi).then(function (response) {
 
-        //append container to the dom 
-        genreContainer.appendChild(titleEL);
-        console.log(titleEL);
+    if (response.ok) {
+      response.json().then(function (data) {
+        displayGame(data.results, genres);
+      });
+    } else {
+      console.log("did not work");
+    }
+    // .then(function (data) {
+    //   var genreContainer = document.getElementById("game-container");
 
-      }
+    //   var gameName = document.createElement("span");
+    //   //results[2].games[0].name
+    //   //console.log(data.results[2].games[2].name);
+    //   // if (rpgResult === "RPG") {
+    //   //   gameName.textContent = data.results[3].games[1].name;
+    //   // } 
+    //   console.log(data)
+  });
+}
 
-    });
+function choicesButton() {
+  var genres = event.target.getAttribute("data-genres");
+
+  if (genres) {
+    genreChoices(genres);
+  };
 }
 
 
@@ -197,10 +196,7 @@ function genreAdventure() {
 //}
 //submitButton.onclick = showHighScores;
 
-startButtonEl.onclick = startQuiz; //this starts the quiz
-
-
-
 //localStore api response 
 
-
+startButtonEl.onclick = startQuiz;
+  //this starts the quiz
