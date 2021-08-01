@@ -132,11 +132,14 @@ function endQuiz() {
 
 }
 
-function displayGame() {
+function displayGame(data) {
   var genreContainer = document.getElementById("game-container");
-  var gameName = document.createElement("span");
+  var gameName = data.results[0].name;
+  var titleEl = document.createElement("span");
 
-  genreContainer.textContent = results[0].name
+  titleEl.textContent = gameName
+
+  genreContainer.appendChild(titleEl)
 }
 
 function genreChoices(genres) {
@@ -148,7 +151,7 @@ function genreChoices(genres) {
 
     if (response.ok) {
       response.json().then(function (data) {
-        displayGame(data.results, genres);
+        displayGame(data.results[0], genres);
       });
     } else {
       console.log("did not work");
