@@ -42,6 +42,8 @@ function createMarker(place) {
 }
 //Google Map
 
+//Option 1
+
 /*pull from the local storage */
 //https://stackoverflow.com/questions/60037063/how-to-save-scores-in-javascript-quiz
 //https://www.youtube.com/watch?v=k8yJCeuP6I8
@@ -56,13 +58,13 @@ var retrievedObject = localStorage.getItem('testObject');
 
 console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
-// console log shows local storage "retrieved objects" values needs to be changed
+// console log shows local storage "retrieved objects" values need to be changed to what jessie wants
 
 
 
 
 
-
+//Option 2
 
 //Local Storage From code quiz 
 
