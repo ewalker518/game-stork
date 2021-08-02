@@ -10,7 +10,7 @@
     background-image: url(../images/controllers.jpg);
     background-color: var(--primary-color);
     background-blend-mode: darken;
-    height: 100%;
+    height: 1000px;
     background-size: cover;
     background-repeat: no-repeat;
 }

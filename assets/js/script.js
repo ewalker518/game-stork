@@ -154,6 +154,10 @@ function genreChoices(genres) {
     } else {
       console.log("did not work");
     }
+
+    
+
+
     // .then(function (data) {
     //   var genreContainer = document.getElementById("game-container");
 
