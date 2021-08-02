@@ -90,6 +90,8 @@ function getQuestion() {
 
     loopChoices.onclick = onButtonClick;
 
+    console.log(choices);
+
 
 
 
@@ -132,16 +134,6 @@ function endQuiz() {
 
 }
 
-function displayGame(data) {
-  var genreContainer = document.getElementById("game-container");
-  var gameName = data.results[0].name;
-  var titleEl = document.createElement("span");
-
-  titleEl.textContent = gameName
-
-  genreContainer.appendChild(titleEl)
-}
-
 function genreChoices(genres) {
   // https://api.rawg.io/api/games?key=63a5c26330c14fde8375dae993498847&page_size=1&genres=shooter
 
@@ -151,7 +143,8 @@ function genreChoices(genres) {
 
     if (response.ok) {
       response.json().then(function (data) {
-        displayGame(data.results[0], genres);
+        // displayGame(genres);
+        console.log(genres)
       });
     } else {
       console.log("did not work");
@@ -169,13 +162,23 @@ function genreChoices(genres) {
   });
 }
 
-function choicesButton() {
-  var genres = event.target.getAttribute("data-genres");
+// function displayGame(data) {
+//   var genreContainer = document.getElementById("game-container");
+//   //var gameName = data.results[0].name;
+//   var titleEl = document.createElement("span");
 
-  if (genres) {
-    genreChoices(genres);
-  };
-}
+//   //titleEl.textContent = gameName
+
+//   genreContainer.appendChild(titleEl)
+// }
+
+// function choicesButton(event) {
+//   var genres = event.target.getAttribute("data-genres");
+
+//   if (genres) {
+//     genreChoices(genres);
+//   }
+// }
 
 
 
