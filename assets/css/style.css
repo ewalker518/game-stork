@@ -4,30 +4,36 @@
     --tertiary-color: #f64c72;
 }
 
-.bg-img{
-    background-image: url(/assets/images/controllers.jpg);
+/* background image */
+
+.bg-img {
+    background-image: url(../images/controllers.jpg);
     background-color: var(--primary-color);
     background-blend-mode: darken;
     height: 1000px;
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
 }
+
+/* color and alignment for all text */
 
 .content {
     color: white;
     text-align: center;
 }
 
+/* header styling */
+
 header {
     height: 400px;
     text-align: right;
 }
 
+
 .header-title {
     display: flex;
     height: 140px;
-    width: 50%;
+    width: 70%;
     border-bottom: 6px solid;
     margin-bottom: 5px;
     border-color: var(--tertiary-color);
@@ -41,12 +47,13 @@ header .title {
     font-size: 6rem;
 }
 
+/* content styling */
+
 .start h1 {
     color: white;
 }
 
 .start, .questions, .results {
-    /* height: 700px; */
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 42%, rgba(80,10,101,1) 97%);
     padding: 30px 35px 30px 35px;
@@ -69,9 +76,7 @@ header .title {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-#map {
-    height: 50%
-  }
+
 
 .choices, .results {
     height: 100%;

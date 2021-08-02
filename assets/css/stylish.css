@@ -1,0 +1,29 @@
+header {
+  height: 100px;
+  text-align: right;
+}
+
+
+.gameTitle {
+  text-align: center;
+}
+
+.goBack {
+  display: block;
+}
+
+
+.map {
+  display: block;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  height: 25vw;
+  width: 40vw;
+}
+
+.map-title {
+  padding-top: 80px;
+  text-align: center;
+}

@@ -1,18 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Stork</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/stylish.css">
 </head>
+
 <body class="bg-img">
+    <div class="content">
+        <div class="container">
+            <header class="peanutbutter">
+                <div id="final-results" class="header-title">
+                    <h1 class="title is-3 has-text-white">All Done!</h1>
+                </div>
+            </header>
+            <div class="block start border-wrap">
+                <h1 class="title is-3">Your recommended Video Game Title is:</h1>
+                <div class="gameTitle title is-3 has-text-white" id="game-container"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="map-title">
+                <h1 class="title is-2 has-text-white">Approximate location of your nearest BestBuy can be found here!
+                </h1>
+            </div>
+            <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+            <div class="container">
+                <div id="map" class="map"></div>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9cAc8pUNYE96OzI0MJ_2jARcnYFGV7Gw&callback=initMap&libraries=places"async></script>
+            </div>
+        </div>
     
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="./assets/js/recommendation-page.js"></script>
 </body>
+
 </html>

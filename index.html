@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -32,31 +31,32 @@
                 </p>
                 <button id="start-btn" class="button is-danger is-medium">Start Quiz</button>
             </div>
-           
+            <div id= "tryout"></div>
             <div id="questions" class="questions hide">
-                <h1 id="question-title"></h1>
-                <div id="choices" class="choices"></div>
-            </div>
-
-            <div id="final-results" class="final-results block hide">
-                <h1 class="title is-3 has-text-white">All Done!</h1>
-                <p class="content is-medium">Your recommended Video Game Title is <span id="score"></span>.</p>
-            </div>
-            
-        </div>
-        
-       
+                <h1 id="question-title" class="title is-3 has-text-white">Which genre do you prefer?</h1>
+                <div id="choices" class="choices">
+                    <form action="recommendation-page.html"></form>
+                        <button class="btn button is-danger is-medium" type="submit" id="button" data-genre="adventure">Adventure</button>
+                        <button class="btn button is-danger is-medium" type="submit" id="button" data-genre="casual">Casual</button>
+                        <button class="btn button is-danger is-medium" type="submit" id="button" data-genre="shooter">Shooter</button>
+                        <button class="btn button is-danger is-medium" type="submit" id="button" data-genre="simulation">Simulation</button>
+                        <button class="btn button is-danger is-medium" type="submit" id="button" data-genre="indie">Indie</button>
+                        <button class="btn button is-danger is-medium" type="submit" id="button" data-genre="racing">Racing</button>
+                    </form>
+                </div> 
+            </div>        
+        </div>      
     </div>
-    
-    <div id="map"></div>
-  
-    
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9cAc8pUNYE96OzI0MJ_2jARcnYFGV7Gw&callback=initMap&libraries=places"
-      async
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="./assets/js/recommendation-page.js"></script>
     <script src="./assets/js/script.js"></script>
+    
+
     
 </body>
 
 </html>
+
+
+
+
