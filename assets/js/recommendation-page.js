@@ -48,15 +48,15 @@ function createMarker(place) {
 //https://stackoverflow.com/questions/60037063/how-to-save-scores-in-javascript-quiz
 //https://www.youtube.com/watch?v=k8yJCeuP6I8
 
-var testObject = { 'one': 1, 'two': 2, 'three': 3 };
+// var testObject = { 'one': 1, 'two': 2, 'three': 3 };
 
-// Put the object into storage
-localStorage.setItem('testObject', JSON.stringify(testObject));
+// // Put the object into storage
+// localStorage.setItem('testObject', JSON.stringify(testObject));
 
-// Retrieve the object from storage
-var retrievedObject = localStorage.getItem('testObject');
+// // Retrieve the object from storage
+// var retrievedObject = localStorage.getItem('testObject');
 
-console.log('retrievedObject: ', JSON.parse(retrievedObject));
+// console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
 // console log shows local storage "retrieved objects" values need to be changed to what jessie wants
 

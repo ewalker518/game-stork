@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/stylish.css">
 </head>
@@ -25,8 +24,8 @@
         </header>
         <div class="block start border-wrap">
             <h1 class="title is-3">Your recommended Video Game Title is:</h1>
+            <div id="game-container"></div>
         </div>
-        <div id="game-container"></div>
 
         <form action="recommendation-page.html">
             <input type="submit" class="hide" value="map" />
@@ -42,6 +41,7 @@
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9cAc8pUNYE96OzI0MJ_2jARcnYFGV7Gw&callback=initMap&libraries=places" async></script>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script src="./assets/js/recommendation-page.js"></script>
 </body>
 

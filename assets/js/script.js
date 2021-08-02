@@ -142,54 +142,35 @@ function endQuiz() {
 function genreChoices(genres) {
   // https://api.rawg.io/api/games?key=63a5c26330c14fde8375dae993498847&page_size=1&genres=shooter
 
-  var genreApi = ("https://api.rawg.io/api/games?key=63a5c26330c14fde8375dae993498847&page_size=1&genres=" + genres )
+  var genreApi = ("https://api.rawg.io/api/games?key=63a5c26330c14fde8375dae993498847&page_size=1&genres=" + genres)
   console.log(genreApi);
   fetch(genreApi).then(function (response) {
 
     if (response.ok) {
       response.json().then(function (data) {
-        // displayGame(genres);
-        console.log(data.results[0].name);
+        var gameName = data.results[0].name;
+        // displayGame(data.results[0].name);
+        console.log(gameName);
+
+        //var genreContainer = document.getElementById("game-container");
+        var tryoutEl = document.getElementById("tryout");
+
+        tryoutEl.innerText = data.results[0].name;
+
+
+        //genreContainer.innerText = data.results[0].name;
+
+        //genreContainer.appendChild(titleEl)
+
       });
     } else {
       console.log("did not work");
     }
 
-    
-
-
-    // .then(function (data) {
-    //   var genreContainer = document.getElementById("game-container");
-
-    //   var gameName = document.createElement("span");
-    //   //results[2].games[0].name
-    //   //console.log(data.results[2].games[2].name);
-    //   // if (rpgResult === "RPG") {
-    //   //   gameName.textContent = data.results[3].games[1].name;
-    //   // } 
-    //   console.log(data)
   });
 }
 
-function displayGame(data) {
-  var genreContainer = document.getElementById("game-container");
-  var gameName = data.results[0].name;
-  var titleEl = document.createElement("span");
-
-  titleEl.textContent = gameName
-
-  genreContainer.appendChild(titleEl)
-}
-
-// function choicesButton(event) {
-//   var genres = event.target.getAttribute("data-genres");
-
-//   if (genres) {
-//     genreChoices(genres);
-//   }
-// }
-
-var buttonClickHandler = function(event) {
+var buttonClickHandler = function (event) {
   var genres = event.target.getAttribute("data-genre");
 
   if (genres) {
@@ -231,5 +212,5 @@ buttonChoices.addEventListener("click", buttonClickHandler);
 
 //localStore api response 
 
-startButtonEl.onclick = startQuiz;
+
   //this starts the quiz
