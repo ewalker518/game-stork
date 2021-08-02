@@ -20,6 +20,9 @@ Try now down below!<h4>
 - <p align="left"> <a href="https://www.gnu.org/software/bash/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a>
   
 - <a href="https://code.visualstudio.com/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" alt="javascript" width="40" height="40"/> </a> </p>
+  
+  <h3 align="left">API Used</h3>
+- RAWG Video Games Database API - https://rawg.io/apidocs
 
 <h2>Preview<h2>
   <img src="https://github.com/ewalker518/game-go/blob/develop/assets/images/updated-image-game-go.png?raw=true" alt="cover image" width="893" height="432"/>
