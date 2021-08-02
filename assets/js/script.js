@@ -153,11 +153,6 @@ function genreChoices(genres) {
         console.log(gameName);
 
         //var genreContainer = document.getElementById("game-container");
-        var tryoutEl = document.getElementById("tryout");
-
-        tryoutEl.innerText = data.results[0].name;
-
-        console.log(gameName);
 
         //saves to storage
         window.localStorage.setItem("gameName", JSON.stringify(gameName));
