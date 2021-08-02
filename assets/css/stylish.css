@@ -1,21 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 header {
   height: 100px;
   text-align: right;
 }
-#map {
-  height: 20vw;
-  width: 40vw;
+
+
+.gameTitle {
+  text-align: center;
 }
 
+.goBack {
+  display: block;
+}
+
+
 .map {
+  display: block;
+  align-items: center;
   position: absolute;
   top: 25%;
   left: 25%;
+  height: 25vw;
+  width: 40vw;
 }
 
 .map-title {

@@ -42,6 +42,17 @@ function createMarker(place) {
 }
 //Google Map
 
+function getGame() {
+  //get score from local storage
+  var gameName = JSON.parse(window.localStorage.getItem("gameName")) || [];
+
+  var gameContain = document.getElementById("game-container");
+
+  gameContain.innerText = gameName
+}
+
+getGame();
+
 //Option 1
 
 /*pull from the local storage */
@@ -68,22 +79,22 @@ function createMarker(place) {
 
 //Local Storage From code quiz 
 
-//function printHighscores() {
-  //var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
-   //highscores.sort(function(a, b) {
+//function printgameNames() {
+  //var gameNames = JSON.parse(window.localStorage.getItem("gameNames")) || [];
+   //gameNames.sort(function(a, b) {
 //return b.score - a.score;
    //});
-   //highscores.forEach(function(score) {
+   //gameNames.forEach(function(score) {
      //  var liTag = document.createElement("li");
       // liTag.textContent = score.initials + " - " + score.score;
-      // var olEl = document.getElementById("highscores");
+      // var olEl = document.getElementById("gameNames");
       // olEl.appendChild(liTag);
   // });
 //}
 
-//function clearHighscores() {
-  //window.localStorage.removeItem("highscores")
+//function cleargameNames() {
+  //window.localStorage.removeItem("gameNames")
   //window.location.reload();
 //}
-//document.getElementById("clear").onclick = clearHighscores;
-//printHighscores();
+//document.getElementById("clear").onclick = cleargameNames;
+//printgameNames();

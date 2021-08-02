@@ -157,6 +157,13 @@ function genreChoices(genres) {
 
         tryoutEl.innerText = data.results[0].name;
 
+        console.log(gameName);
+
+        //saves to storage
+        window.localStorage.setItem("gameName", JSON.stringify(gameName));
+
+        //adds it to other page
+        window.location.href = "recommendation-page.html";
 
         //genreContainer.innerText = data.results[0].name;
 
@@ -177,6 +184,10 @@ var buttonClickHandler = function (event) {
     genreChoices(genres);
   }
 };
+
+function saveName() {
+
+}
 
 startButtonEl.onclick = startQuiz;
 
