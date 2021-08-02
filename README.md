@@ -25,6 +25,7 @@ Try now down below!<h4>
   
   <h3 align="left">🎮API Used</h3>
 - RAWG Video Games Database API - https://rawg.io/apidocs
+- Google Maps Games Database API - https://maps.googleapis.com/
 
 <h2>Preview<h2>
   <img src="https://github.com/ewalker518/game-go/blob/develop/assets/images/updated-image-game-go.png?raw=true" alt="cover image" width="893" height="432"/>
