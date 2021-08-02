@@ -195,7 +195,8 @@ function genreAdventure() {
 
 //window.location.href = "highscore.html";   //this will take us to the separate html page
 //}
-//submitButton.onclick = showHighScores;
+//oneButton.onclick = showHighScores;
+
 
 startButtonEl.onclick = startQuiz; //this starts the quiz
 
