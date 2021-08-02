@@ -33,18 +33,19 @@
             </div>
            
             <div id="questions" class="questions hide">
-                <h1 id="question-title"></h1>
-                <div id="choices" class="choices"></div>
-            </div>
-
-            <div id="final-results" class="final-results block hide">
-                <h1 class="title is-3 has-text-white">All Done!</h1>
-                <p>Your recommended Video Game Title is:</p>
-                <div id="game-container"></div>
-            </div>
-            
-        </div>
-        
+                <h1 id="question-title">Which genre do you prefer?</h1>
+                <div id="choices" class="choices">
+                    <form action="recommendation-page.html"></form>
+                        <button class="btn" type="submit" id="button" data-genre="adventure">Adventure</button>
+                        <button class="btn" type="submit" id="button" data-genre="casual">Casual</button>
+                        <button class="btn" type="submit" id="button" data-genre="shooter">Shooter</button>
+                        <button class="btn" type="submit" id="button" data-genre="simulation">Simulation</button>
+                        <button class="btn" type="submit" id="button" data-genre="indie">Indie</button>
+                        <button class="btn" type="submit" id="button" data-genre="racing">Racing</button>
+                    </form>
+                </div> 
+            </div>        
+        </div>      
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
@@ -56,15 +57,4 @@
 
 
 
-<script>
-    function passvalues ()
-    {
-        var firstname=document.getElementById("txt").value;
-        localStorage.setItem("textvalue",firstname);
-        return false;
-    }
-</script>
 
-<form action="recommendation-page.html">
-    <input type="submit" value="click" onclick="passvalues();"/>
-    </form>

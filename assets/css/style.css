@@ -10,7 +10,7 @@
     background-image: url(../images/controllers.jpg);
     background-color: var(--primary-color);
     background-blend-mode: darken;
-    height: 1000px;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -28,6 +28,7 @@ header {
     height: 400px;
     text-align: right;
 }
+
 
 .header-title {
     display: flex;
@@ -75,21 +76,7 @@ header .title {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-#map {
-    height: 60%;
-    width: 50%;
-}
 
-.map {
-    position: absolute;
-    top: 25%;
-    left: 25%;
-}
-
-.map-title {
-    padding-top: 80px;
-    text-align: center;
-}
 
 .choices, .results {
     height: 100%;

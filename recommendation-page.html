@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,18 +13,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/stylish.css">
 </head>
-<body class="bg-img">
-    <div class="map-title">
-        <h1 class="title is-2 has-text-white">See where your new game recommendation is available for purchase!</h1>
-    </div>
-    <div id="map" class="map"></div>
-    
 
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9cAc8pUNYE96OzI0MJ_2jARcnYFGV7Gw&callback=initMap&libraries=places"
-      async
-    ></script>
+<body class="bg-img">
+    <div class="container">
+        <header class="peanutbutter">
+            <div id="final-results" class="header-title">
+                <h1 class="title is-3 has-text-white">All Done!</h1>
+            </div>
+        </header>
+        <div class="block start border-wrap">
+            <h1 class="title is-3">Your recommended Video Game Title is:</h1>
+        </div>
+        <div id="game-container"></div>
+
+        <form action="recommendation-page.html">
+            <input type="submit" class="hide" value="map" />
+        </form>
+    </div>
+    <div class="container">
+        <div class="map-title">
+            <h1 class="title is-2 has-text-white">See where your new game recommendation is available for purchase!</h1>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div>
+            <div id="map" class="map"></div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9cAc8pUNYE96OzI0MJ_2jARcnYFGV7Gw&callback=initMap&libraries=places" async></script>
+        </div>
+    </div>
     <script src="./assets/js/recommendation-page.js"></script>
 </body>
+
 </html>
