@@ -1,11 +1,10 @@
 // Google Map
 let map;
 let service;
-let infowindow;
-
+let infoWindow
 function initMap() {
   const saltLake = new google.maps.LatLng(40.7608, 111.8910);
-  infowindow = new google.maps.InfoWindow();
+  infoWindow = new google.maps.InfoWindow();
   map = new google.maps.Map(document.getElementById("map"), {
     center: saltLake,
     zoom: 12,
@@ -36,8 +35,8 @@ function createMarker(place) {
    
   });
   google.maps.event.addListener(marker, "click", () => {
-    infowindow.setContent(place.name || "");
-    infowindow.open(map, marker,);
+    infoWindow.setContent(place.name || "");
+    infoWindow.open(map, marker,);
   });
 }
 //Google Map
