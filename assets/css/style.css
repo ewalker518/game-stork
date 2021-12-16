@@ -100,7 +100,7 @@ header .title {
     min-height: 100%;
     max-width: 900px;
     min-width: auto;
-    width: auto;
+    width: 100%;
   }
 }
 @media screen and (max-width: 850px) {
