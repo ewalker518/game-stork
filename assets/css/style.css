@@ -93,6 +93,8 @@ header .title {
 .results {
   height: 100%;
 }
+
+/* because background picture is 900px wide */
 @media screen and (max-width: 900px) {
   .bg-img {
     min-height: 100%;
@@ -143,5 +145,8 @@ header .title {
   }
   header {
     height: 20vh;
+  }
+  .content.is-medium {
+    font-size: 1rem;
   }
 }
