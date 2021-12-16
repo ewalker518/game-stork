@@ -103,6 +103,7 @@ header .title {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 850px) {
   header .title {
     color: var(--tertiary-color);
@@ -150,3 +151,11 @@ header .title {
     font-size: 1rem;
   }
 }
+@media screen and (max-height: 425px) {
+    header {
+        display: none;
+    }
+    .questions {
+      margin-top: 10vh;  
+    }
+  }
