@@ -1,6 +1,6 @@
 header {
   height: 100px;
-  text-align: right;
+  text-align: left;
 }
 
 
@@ -22,4 +22,10 @@ header {
 .map-title {
   padding-top: 80px;
   text-align: center;
+}
+
+@media screen and (max-height: 425px) {
+  .recommendation {
+    margin-top: 20vh;  
+  }
 }
